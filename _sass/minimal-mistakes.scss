@@ -7,6 +7,14 @@
 /* Variables */
 @import "minimal-mistakes/variables";
 
+$font-url: 'https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff';
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url($font-url) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Mixins and functions */
 @import "minimal-mistakes/vendor/breakpoint/breakpoint";
 @include breakpoint-set("to ems", true);

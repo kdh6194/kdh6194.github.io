@@ -18,16 +18,16 @@ minimal_mistakes_skin    : "dark" #"default", "air", "aqua", "contrast", "dark",
 locale                   : "ko-KR" #"ko-KR"한국 "en-GB"영국 "en-US"미국 "fr-FR"프랑스(불어) "fr-CA"캐나다(불어)
 title                    : "IT_AcornBlog"
 title_separator          : "|"
-subtitle                 : "The pain that can't kill me makes me stronger"
-name                     : "Kim DoHyun"
-description              : "Except for passion and hard work, I`m a corpse"
+subtitle                 : "a scribble book"
+name                     : "Acorn"
+description              : "The pain that can't kill me makes me stronger"
 url                      : "https://kdh6194.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "https://kdh6194.github.io/" # the subpath of your site, e.g. "/blog"
 repository               : "kdh6194/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/unsplash-image-1.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/apple-touch-icon-76x76.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Acorn" # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -97,60 +97,61 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "GTM-P2C46GBF"
+    anonymize_ip         : true # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Kim DoHyun"
+  avatar           : "/assets/images/idot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Except for passion and hard work, I`m a corpse"
+  location         : "Seoul"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "mailto:kdh6194@naver.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      url: "https://github.com/kdh6194/repository"
+    - #label: "Website"
+      #icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - #label: "Twitter"
+      #icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - #label: "Facebook"
+      #icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    
+    - #label: "Instagram"
+      #icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/kdh6194/repository"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+      url: 
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   # url:
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   # url:
+    # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+    #   # url:
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   # url:
 
 
 # Reading Files
@@ -194,8 +195,8 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 # Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
+lsi: true
+excerpt_separator: "<!--more-->" #"\n\n"
 incremental: false
 
 
@@ -206,9 +207,9 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
+  toc_levels: 1..10
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+  enable_coderay: true
 
 
 # Sass/SCSS
@@ -216,10 +217,16 @@ sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
+# 폰트 수정 : 구글 폰트를 사용해서 @import 소스코드를 복사
+# sass-> mistake.~~ .scss에서 하단에 붙혀넣기하면됨
+# valiables.scss 설정
+# global-font-family $Sans-serif 변수에 css rules에 있는 코드를 붙혀넣기만 하면된다.
+# 깃블로그를 작성했는데 커밋이력이 남지않는 경우
+# pull request를하여 병합해주면 된다.
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -251,12 +258,38 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
+
+# 여기에 추가하고 싶은 카테고리나 태그를 지정하여 만들 수 있다.
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
+
+# 밑에 예시를 작성함
+# ---
+# title : "Category"
+# layout : categories
+# permalink : /categories/
+# author_profile:true
+# sidebar_main:true
+# ---
+
+# data디렉토리에 navigation.yml에 추가해야 될 내용
+# -title : "Category"
+#  url : /categories/
+
+# posts에서 추가할 내용
+# ---
+# layout:single
+# title:"..."
+# categoies : coding
+# ---
+
+# 태그 추가 => 카테고리 설정한 방법을 동일하게 진행하면 됩니다.
+# 복수 태그 => posts에 tags:[]안에 쉼표를 달면서 여러개를 설정할 수 있습니다.
+
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -286,6 +319,7 @@ defaults:
       type: posts
     values:
       show_date: true
+      date_format : "%Y-%m-%d"
       layout: single
       author_profile: true
       read_time: true
