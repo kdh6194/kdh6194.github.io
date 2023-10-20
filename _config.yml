@@ -24,8 +24,8 @@ description              : "The pain that can't kill me makes me stronger"
 url                      : "https://kdh6194.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "kdh6194/" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/unsplash-image-1.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/apple-touch-icon-76x76.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : "/docs/assets/images/unsplash-image-1.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/docs/assets/images/apple-touch-icon-76x76.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Acorn" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "Kim DoHyun"
-  avatar           : "/assets/images/idot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/docs/assets/images/idot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Except for passion and hard work, I`m a corpse"
   location         : "Seoul"
   email            : 
@@ -196,7 +196,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: true
-excerpt_separator: "\n\n" #"\n\n" "<!--more-->" 
+excerpt_separator: "<!--more-->" #"\n\n"
 incremental: false
 
 
