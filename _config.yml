@@ -217,7 +217,7 @@ kramdown:
 
 # Sass/SCSS
 sass:
-  sass_dir: _sass
+  sass_dir: assets
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 # 폰트 수정 : 구글 폰트를 사용해서 @import 소스코드를 복사
