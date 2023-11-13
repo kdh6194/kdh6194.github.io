@@ -1,7 +1,8 @@
-// ---
-// layout: none
-// ---
+---
+layout: none
+---
 
+{% raw %}
 var idx = lunr(function () {
   this.field('title')
   this.field('excerpt')
@@ -71,3 +72,4 @@ $(document).ready(function() {
     }
   });
 });
+{% endraw %}

@@ -12,22 +12,22 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR" #"ko-KR"한국 "en-GB"영국 "en-US"미국 "fr-FR"프랑스(불어) "fr-CA"캐나다(불어)
-title                    : "IT_AcornBlog"
-title_separator          : "|"
-subtitle                 : "a scribble book" # site tagline that appears below site title in masthead
-name                     : "Acorn"
-description              : "The pain that can't kill me makes me stronger"
-url                      : "https://kdh6194.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+locale                   : "en-US"
+title                    : "Site Title"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Your Name"
+description              : "An amazing website."
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "AcornBlog" # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : true # true, false (default)
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
@@ -59,11 +59,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
+search                   : # true, false (default)
+search_full_content      : # true, false (default)
+search_provider          : # lunr (default), algolia, google
 lunr:
-  search_within_pages    : false # true, false (default)
+  search_within_pages    : # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -73,11 +73,11 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification: ZJKywjzDnRnQhzajs3MR2I0m1jNEA6eaI5xCDkbp1gs # 도메인 이름 공급업체 방법으로는 해결이 되지 않음
-bing_site_verification   : #
-naver_site_verification  : <meta name="naver-site-verification" content="1acd5bbc4bbfb46e54d0aa05fdbeac47088d31ee" />
-yandex_site_verification : #
-baidu_site_verification  : #
+google_site_verification :
+bing_site_verification   :
+naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
 
 # Social Sharing
 twitter:
@@ -96,61 +96,60 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : "GTM-P2C46GBF"
-    anonymize_ip         : true # true, false (default)
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Kim DoHyun"
-  avatar           : #"/docs/assets/images/idot.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Except for passion and hard work, I`m a corpse"
-  location         : "Seoul"
-  email            : 
+  name             : "Your Name"
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Somewhere"
+  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:kdh6194@naver.com"
+      # url: "mailto:your.name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kdh6194/repository"
-    - #label: "Website"
-      #icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - #label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - #label: "Facebook"
-      #icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    
-    - #label: "Instagram"
-      #icon: "fab fa-fw fa-instagram"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url:
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kdh6194/repository"
+      # url:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      url: 
-    # - label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #   # url:
-    # - label: "Facebook"
-    #   icon: "fab fa-fw fa-facebook-square"
-    #   # url:
-    # - label: "Bitbucket"
-    #   icon: "fab fa-fw fa-bitbucket"
-    #   # url:
-    # - label: "Instagram"
-    #   icon: "fab fa-fw fa-instagram"
-    #   # url:
+      # url:
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url:
 
 
 # Reading Files
@@ -195,7 +194,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n" # "<!--more-->"
+excerpt_separator: "\n\n"
 incremental: false
 
 
@@ -206,26 +205,16 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc: true # 테이블 오브 컨텐츠 활성화 - 페이지에 포함된 제목들로 부터 자동으로 목차가 생김
-  toc_sticky: true # 테이블 오브 컨텐츠를 고정 - 사용자가 페이지를 스크롤해도 목차는 화면에 계속 보이기 됨
-  toc_label: "On this page" # 테이블 오브 컨텐츠에 라벨을 지정
-  toc_icon: "cog" # 테이블 오브 컨텐츠의 아이콘을 지정
-  toc_levels: 1..6 # 이 설정은 포함할 제목의 수준 예를 들면 본문에 있는 제목의 크기를 기준으로 목차를 생성 2-1.index docs 같은 역할
+  toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: true
+  enable_coderay: false
 
 
 # Sass/SCSS
 sass:
-  sass_dir: assets
+  sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-# 폰트 수정 : 구글 폰트를 사용해서 @import 소스코드를 복사
-# sass-> mistake.~~ .scss에서 하단에 붙혀넣기하면됨
-# valiables.scss 설정
-# global-font-family $Sans-serif 변수에 css rules에 있는 코드를 붙혀넣기만 하면된다.
-# 깃블로그를 작성했는데 커밋이력이 남지않는 경우
-# pull request를하여 병합해주면 된다.
 
 # Outputting
 permalink: /:categories/:title/
@@ -267,30 +256,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-# 밑에 예시를 작성함
-# ---
-# title : "Category"
-# layout : categories
-# permalink : /categories/
-# author_profile:true
-# sidebar_main:true
-# ---
-
-# data디렉토리에 navigation.yml에 추가해야 될 내용
-# -title : "Category"
-#  url : /categories/
-
-# posts에서 추가할 내용
-# ---
-# layout:single
-# title:"..."
-# categoies : coding
-# ---
-
-# 태그 추가 => 카테고리 설정한 방법을 동일하게 진행하면 됩니다.
-# 복수 태그 => posts에 tags:[]안에 쉼표를 달면서 여러개를 설정할 수 있습니다.
-
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -319,11 +284,9 @@ defaults:
       path: ""
       type: posts
     values:
-      show_date: true
-      date_format : "%Y-%m-%d"
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true

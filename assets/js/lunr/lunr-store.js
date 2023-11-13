@@ -1,6 +1,6 @@
-// ---
-// layout: none
-// ---
+---
+layout: none
+---
 
 var store = [
   {%- for c in site.collections -%}
