@@ -19,7 +19,7 @@ locale                   : "ko-KR" #"ko-KR"한국 "en-GB"영국 "en-US"미국 "f
 title                    : "IT_AcornBlog"
 title_separator          : "|"
 subtitle                 : "a scribble book" # site tagline that appears below site title in masthead
-name                     : "Acorn"
+name                     : "AcornBlog"
 description              : "The pain that can't kill me makes me stronger"
 url                      : "https://kdh6194.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -29,7 +29,7 @@ head_scripts:
   - /assets/js/your-custom-head-script.js
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : "AcornBlog" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "Acorn" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -62,11 +62,11 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
   hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 lunr:
-  search_within_pages    : # true, false (default)
+  search_within_pages    : true # true, false (default)
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
