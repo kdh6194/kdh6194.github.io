@@ -20,7 +20,7 @@ title                    : "IT_AcornBlog"
 title_separator          : "|"
 subtitle                 : "a scribble book" # site tagline that appears below site title in masthead
 name                     : "AcornBlog"
-description              : "The pain that can't kill me makes me stronger"
+description              : 
 url                      : "https://kdh6194.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "kdh6194/kdh6194.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,13 +109,13 @@ analytics:
 author:
   name             : "Kim DoHyun"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Except for passion and hard work, I`m a corpse"
+  bio              : "The pain that can't kill me makes me stronger. Except for passion and hard work, I`m a corpse"
   location         : "Seoul"
-  email            :
+  email            : kdh6194@naver.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:kdh6194@naver.com"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:kdh6194@naver.com"
     # - label: "Website"
     #   icon: "fas fa-fw fa-link"
     #   # url: "https://your-website.com"
@@ -296,11 +296,11 @@ defaults:
       date_format : "%Y-%m-%d"
       show_date: true
 
-tipue_search:
-     include:
-         pages: false
-         collections: []
-     exclude:
-         files: [search.html, index.html, tags.html]
-         categories: []
-         tags: []
+# tipue_search:
+#      include:
+#          pages: false
+#          collections: []
+#      exclude:
+#          files: [search.html, index.html, tags.html]
+#          categories: []
+#          tags: []
