@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Github blog를 생성하기"
+date:   2022-12-20 12:00:00 
+lastmod : 2022-12-20 12:00:00
+sitemap :
+  changefreq : daily
+  priority : 1.0
+---
+
+**GitVlog 생성하는 방법**
+사용전 준비되면 좋은 것 : Ruby, GitHub Desktop 설치
+---
+1.리포지터리 생성 - 생성시 이름은 **username(본인 유저네임).github.io**로 작성
+2.생성 후 clone 후 desktop에서 사용할 수 있도록 연결합니다.
+3.연결이 되었다면 커맨드 프롬포트(power shell)를 사용해서 파일을 생성합니다.
+```
+cd username.github.io
+echo "Hello World" > index.html
+```
+=> desktop에서 ctrl + shitf + f(클론된 폴더 열기)해서 파일이 생성되었는지 확인 후 commit/push를 진행하면됩니다
+4.깃허브 페이지에 올라갔는지 확인 - username(본인 유저네임).github.io을 url창에 입력하여 확인
+
+jekyll 설치
+1.Ruby를 설치합니다. => 전 window에서 진행하고 있습니다. 맥os에서는 설치가 필요없습니다.
+```파워셀(커맨드 프롬포트)
+Invoke-WebRequest -Uri "https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.0.2-1/rubyinstaller-devkit-3.0.2-1-x64.exe" -OutFile "rubyinstaller-devkit-3.0.2-1-x64.exe"
+// 이후 밑에 코드를 진행하시면 됩니다.
+Start-Process .\rubyinstaller-devkit-3.0.2-1-x64.exe
+```
+2.설치가 완료되었다면 커맨드 프롬포트를 **관리자 권한으로 실행**로 열어서 밑에 코드를 작성합니다. => 파워셀로 안해서 잘 모르겠습니다.
+```
+gem install jekyll bundler
+```
+3.설치후 커맨드 프롬포트에서 클론된 폴더로 가서 밑에 명령어를 작성합니다.
+=> 클론된 폴더에 숨김파일 말고 전부 지워서 아무것도 없어야합니다. 그래야 설치가 진행됩니다.
+```
+jekyll new ./
+// 설치후 밑에 명령어를 작성합니다.
+bundle install
+bundle exec jekyll serve
+```
+4.http://127.0.0.1:4000으로 들어가서 화면이 출력되는지 확인 후 desktop에서 commit/push를 합니다.
+5.마지막으로 url창에 username.github.io를 들어가서 http://127.0.0.1:4000와 화면이 같은지 확인하고 같다면 성공적으로 GitVlog를 만드셨습니다.
+
