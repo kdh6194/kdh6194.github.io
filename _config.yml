@@ -30,7 +30,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               :  # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -41,8 +41,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+    theme                : "photon-dark" # "github-light" (default), "github-dark"
+    issue_term           : "pathname" # "pathname" (default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
     category_name        : # Full text name of the category
@@ -73,9 +73,9 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
+google_site_verification : ZJKywjzDnRnQhzajs3MR2I0m1jNEA6eaI5xCDkbp1gs
 bing_site_verification   :
-naver_site_verification  :
+naver_site_verification  : <meta name="naver-site-verification" content="1acd5bbc4bbfb46e54d0aa05fdbeac47088d31ee" />
 yandex_site_verification :
 baidu_site_verification  :
 
@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Acorn"
-  avatar           : "/assets/images/acorn.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/acorn2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "The pain that can't kill me makes me stronger. Except for passion and hard work, I`m a corpse"
   location         : "Seoul / South Korea"
   email            : 
