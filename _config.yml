@@ -197,6 +197,12 @@ sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
+# 폰트 수정 : 구글 폰트를 사용해서 @import 소스코드를 복사
+# sass-> mistake.~~ .scss에서 하단에 붙혀넣기하면됨
+# valiables.scss 설정
+# global-font-family $Sans-serif 변수에 css rules에 있는 코드를 붙혀넣기만 하면된다.
+# 깃블로그를 작성했는데 커밋이력이 남지않는 경우
+# pull request를하여 병합해주면 된다.
 
 # Outputting
 permalink: /:categories/:title/
@@ -250,6 +256,31 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+# 밑에 예시를 작성함
+# _pages폴더 생성, category-archive.md파일 생성 후 아래 내용 작성
+# ---
+# title : "Category"
+# layout : categories
+# permalink : /categories/
+# author_profile:true
+# sidebar_main:true
+# ---
+
+# data디렉토리에 navigation.yml에 추가해야 될 내용
+# -title : "Category"
+#  url : /categories/
+
+# posts에서 추가할 내용
+# ---
+# layout:single
+# title:"..."
+# categoies : coding
+# ---
+
+# 태그 추가 => 카테고리 설정한 방법을 동일하게 진행하면 됩니다.
+# 복수 태그 => posts에 tags:[]안에 쉼표를 달면서 여러개를 설정할 수 있습니다.
+
+
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -274,3 +305,7 @@ defaults:
       related: true
       show_date : true
       date_format : "%Y-%m-%d"
+      toc: true # 테이블 오브 컨텐츠 활성화 - 페이지에 포함된 제목들로 부터 자동으로 목차가 생김
+      toc_sticky: true # 테이블 오브 컨텐츠를 고정 - 사용자가 페이지를 스크롤해도 목차는 화면에 계속 보이기 됨
+      toc_label: "목차" # 테이블 오브 컨텐츠에 라벨을 지정
+      toc_icon: "fa-solid fa-magnifying-glass" # 테이블 오브 컨텐츠의 아이콘을 지정
