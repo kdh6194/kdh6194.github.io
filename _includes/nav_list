@@ -1,4 +1,57 @@
+{% assign sum = site.posts | size %}
 {% assign navigation = site.data.navigation[include.nav] %}
+
+{% assign categories_max = 0 %}
+{% for category in site.categories %}
+  {% if category[1].size > categories_max %}
+    {% assign categories_max = category[1].size %}
+  {% endif %}
+{% endfor %}
+
+<nav class="nav__list">
+  {% if navigation[0].use %}
+    <input id="ac-toc" name="accordion-toc" type="checkbox" />
+    <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+    <ul class="nav__items" id="category_tag_menu">
+    <li>
+      📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style> 
+    </li>
+    <span class="nav__sub-title">{{ navigation[0].title }}</span>
+    <li>
+      {% for i in (1..categories_max) reversed %}
+        {% for category in site.categories %}
+          {% if category[1].size == i %}
+            <ul style="padding-top: 0px; padding-bottom: 0px;">
+              <a href="/categories/{{ category[0] | slugify }}">
+                <strong style="font-size: 16px;">{{ category[0] }}</strong> <span class="taxonomy__count" style="font-size: 14px;">{{ i }}</span>
+              </a>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </li>
+    <span class="nav__sub-title">{{ navigation[1].title }}</span>
+    <li>
+      {% if navigation[1].children %}
+        {% for child in navigation[1].children %}
+        
+            <ul style="padding-top: 0px; padding-bottom: 0px;">
+              <a href="{{ child.url }}">
+                <strong style="font-size: 16px;">{{ child.title }}</strong>
+              </a>
+            </ul>
+            
+        {% endfor %}
+      {% endif %}
+    </li>
+    </ul>
+  {% endif %}
+</nav>
+
+
+<!-- default nav_list code
+
+  {% assign navigation = site.data.navigation[include.nav] %}
 
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
@@ -24,3 +77,118 @@
     {% endfor %}
   </ul>
 </nav>
+
+-->
+
+<!-- sidebar navigiation -->
+<!--
+{% assign navigation = site.data.navigation[include.nav] %}
+
+{% assign categories_max = 0 %}
+{% for category in site.categories %}
+  {% if category[1].size > categories_max %}
+    {% assign categories_max = category[1].size %}
+  {% endif %}
+{% endfor %}
+
+{% assign tags_max = 0 %}
+{% for tag in site.tags %}
+  {% if tag[1].size > tags_max %}
+    {% assign tags_max = tag[1].size %}
+  {% endif %}
+{% endfor %}
+
+<nav class="nav__list">
+  {% if navigation[0].use %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+    <span class="nav__sub-title">{{ navigation[0].title }}</span>
+    <li>
+      {% for i in (1..categories_max) reversed %}
+        {% for category in site.categories %}
+          {% if category[1].size == i %}
+            <ul style="padding-top: 0px; padding-bottom: 0px;">
+              <a href="/categories/#{{ category[0] | slugify }}">
+                <strong style="font-size: 16px;">{{ category[0] }}</strong> <span class="taxonomy__count" style="font-size: 14px;">{{ i }}</span>
+              </a>
+            </ul>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </li>
+  </ul>
+  {% endif %}
+
+  {% if navigation[1].use %}
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
+  <ul class="nav__items">
+    <span class="nav__sub-title">{{ navigation[1].title }}</span>
+    <li>
+    {% for i in (1..tags_max) reversed %}
+      {% for tag in site.tags %}
+        {% if tag[1].size == i %}
+          <ul style="padding-top: 0px; padding-bottom: 0px;">
+            <a href="/tags/#{{ tag[0] | slugify }}">
+              <strong style="font-size: 16px;">{{ tag[0] }}</strong> <span class="taxonomy__count" style="font-size: 14px;">{{ i }}</span>
+            </a>
+          </ul>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    </li>
+  </ul>
+  {% endif %}
+</nav>
+
+
+
+<!-- 카테고리 하위 항목의 개수를 나타내는 코드 -->
+<!-- 
+{% assign navigation = site.data.navigation[include.nav] %}
+
+{% assign categories_max = 0 %}
+{% for category in site.categories %}
+  {% if category[1].size > categories_max %}
+    {% assign categories_max = category[1].size %}
+  {% endif %}
+{% endfor %}
+
+{% assign tags_max = 0 %}
+{% for tag in site.tags %}
+  {% if tag[1].size > tags_max %}
+    {% assign tags_max = tag[1].size %}
+  {% endif %}
+{% endfor %}
+
+<nav class="nav__list">
+  {% if navigation[0].use %}
+  <input id="ac-toc-category" name="accordion-toc-category" type="checkbox" />
+  <label for="ac-toc-category">{{ navigation[0].title }}</label>
+  <ul class="nav__items">
+    {% for child in navigation[0].children %}
+      <li>
+        <a href="{{ child.url }}">{{ child.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if navigation[1].use %}
+  <input id="ac-toc-tag" name="accordion-toc-tag" type="checkbox" />
+  <label for="ac-toc-tag">{{ navigation[1].title }}</label>
+  <ul class="nav__items">
+    {% for i in (1..tags_max) reversed %}
+      {% for tag in site.tags %}
+        {% if tag[1].size == i %}
+          <li>
+            <a href="/tags/#{{ tag[0] | slugify }}">{{ tag[0] }} <span class="taxonomy__count">{{ i }}</span></a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</nav>
+ -->

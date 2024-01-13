@@ -197,13 +197,6 @@ sass:
   sass_dir: _sass
   style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-# 폰트 수정 : 구글 폰트를 사용해서 @import 소스코드를 복사
-# sass-> mistake.~~ .scss에서 하단에 붙혀넣기하면됨
-# valiables.scss 설정
-# global-font-family $Sans-serif 변수에 css rules에 있는 코드를 붙혀넣기만 하면된다.
-# 깃블로그를 작성했는데 커밋이력이 남지않는 경우
-# pull request를하여 병합해주면 된다.
-
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show 더 늘리고 싶으면 늘려도 된다.
@@ -219,6 +212,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -228,6 +222,7 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jemoji
 
 
 # Archives
@@ -247,42 +242,19 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-# 밑에 예시를 작성함
-# _pages폴더 생성, category-archive.md파일 생성 후 아래 내용 작성
-# ---
-# title : "Category"
-# layout : categories
-# permalink : /categories/
-# author_profile:true
-# sidebar_main:true
-# ---
-
-# data디렉토리에 navigation.yml에 추가해야 될 내용
-# -title : "Category"
-#  url : /categories/
-
-# posts에서 추가할 내용
-# ---
-# layout:single
-# title:"..."
-# categoies : coding
-# ---
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 # 태그 추가 => 카테고리 설정한 방법을 동일하게 진행하면 됩니다.
 # 복수 태그 => posts에 tags:[]안에 쉼표를 달면서 여러개를 설정할 수 있습니다.
-
-
 
 # HTML Compression
 # - https://jch.penibelst.de/

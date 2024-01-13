@@ -2,11 +2,34 @@
 main:
   - title: "Search"
     url: /search/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Category"
+    url: /categories/
+  - title: "Posts by Year"
+    url: /year-archive/
+
+
+counts:
+  - title: "카테고리"
+    use: true
+  - title: "참고 자료"
+    children:
+      - title: "GitHub-Blog"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Java"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Spring Boot"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "DateBase"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Linux"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Docker"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "AWS"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Study"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Project"
+        url: https://github.com/mmistakes/minimal-mistakes
+      - title: "Docs"
+        url: https://github.com/mmistakes/minimal-mistakes
