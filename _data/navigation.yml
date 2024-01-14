@@ -7,7 +7,7 @@ main:
   - title: "Posts by Year"
     url: /year-archive/
 
-
+# 참고 자료 url은 따로 카테고리별 url 모음을 깃블로그에 작성해두고 불러오는 방식으로 채용 
 counts:
   - title: "카테고리"
     use: true
@@ -18,7 +18,7 @@ counts:
       - title: "Java"
         url: https://github.com/mmistakes/minimal-mistakes
       - title: "Spring Boot"
-        url: https://github.com/mmistakes/minimal-mistakes
+        url: https://github.com/spring-projects/spring-boot
       - title: "DateBase"
         url: https://github.com/mmistakes/minimal-mistakes
       - title: "Linux"

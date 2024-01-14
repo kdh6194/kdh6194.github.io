@@ -116,9 +116,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kdh6194"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "fa-stack-overflow"
+      icon: "fa-brands fa-stack-overflow"
+      url: "https://stackoverflow.com/"
 
 # Site Footer
 footer:
@@ -132,7 +132,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/"
-
+    - label: "fa-stack-overflow"
+      icon: "fa-brands fa-stack-overflow"
+      url: "https://stackoverflow.com/"
 
 # Reading Files
 include:
@@ -202,7 +204,7 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show 더 늘리고 싶으면 늘려도 된다.
 paginate_path: /page:num/
 timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+#timezone 쓸 때 플러그인 설치 필요
 
 # Plugins (previously gems:)
 plugins:
@@ -281,5 +283,5 @@ defaults:
       date_format : "%Y-%m-%d"
       toc: true # 테이블 오브 컨텐츠 활성화 - 페이지에 포함된 제목들로 부터 자동으로 목차가 생김
       toc_sticky: true # 테이블 오브 컨텐츠를 고정 - 사용자가 페이지를 스크롤해도 목차는 화면에 계속 보이기 됨
-      toc_label: "목차" # 테이블 오브 컨텐츠에 라벨을 지정
-      toc_icon: fa-solid fa-magnifying-glass # 테이블 오브 컨텐츠의 아이콘을 지정
+      toc_label: "목차" # 테이블 오브 컨텐츠에 라벨을 지정 - 세부 항목은 md에서 제목문법을 사용한 문구가 사용됨
+      toc_icon: "fa-solid fa-magnifying-glass" # 테이블 오브 컨텐츠의 아이콘을 지정
